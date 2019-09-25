@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-rc
+spec:
+    replicas: 2
+    selectors:
+              app: nginx-app
+template:
+         metadata:
+                  labels:
+                     app: nginx-app
+spec:
+        Containers:
+        - name: nginx-container
+          image: ubuntu
+                ports:
+                   ContainerPort: 8080
+                   protocol: TCP
+
+~
