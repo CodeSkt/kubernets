@@ -1,0 +1,2 @@
+# kubernets
+all kubernets
